@@ -26,7 +26,7 @@ else
     mkdir -p /mnt/grey/logrey/
     cd /mnt/grey
     timedatectl set-timezone Asia/Shanghai
-    RUN yum install -y java-1.8.0-openjdk.x86_64
+    yum install -y java-1.8.0-openjdk.x86_64
     yum -y install vim*
     yum -y install net-tools
     echo "root:Semaphore88212884" | chpasswd
