@@ -2,21 +2,21 @@
 
 echo "start:" $(date +"%Y-%m-%d %H:%M:%S")
 
-#设置日志文件名
 LogNameDATE=`date '+%Y_%m_%d'`
 LogFile=/mnt/logrun/log_$LogNameDATE.log
 
-#判断日志目录是否存在
 if [ ! -d "/mnt/logrun/" ];then
     mkdir /mnt/logrun/
 fi
 
-#输出启动时间
 echo "start:" $(date +"%Y-%m-%d %H:%M:%S") >> $LogFile
 
 if [ -f "/mnt/grey/grey.jar" ];then
     echo "run grey ..."
     echo "run grey ..." >> $LogFile
+
+    /mnt/grey/run.sh
+
 else
     echo "autodeploy grey start..."
     echo "autodeploy grey start..." >> $LogFile
@@ -38,8 +38,9 @@ else
     echo "autodeploy grey end..."
     echo "autodeploy grey end..." >> $LogFile
 
-    /mnt/grey/run.sh
-
     echo "run grey ..."
     echo "run grey ..." >> $LogFile
+
+    /mnt/grey/run.sh
 fi
+
