@@ -27,11 +27,11 @@ else
     cd /mnt/grey
 
     curl -O  https://greycloud.oss-accelerate.aliyuncs.com/Grey/grey.jar
-    curl -O  http://192.168.3.24//run.sh
-    curl -O  http://192.168.3.24/kill.sh
-    curl -O  http://192.168.3.24/query.sh
-    curl -O  http://192.168.3.24/tail.sh
-    curl -O  http://192.168.3.24/update.sh
+    curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/run.sh
+    curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/kill.sh
+    curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/query.sh
+    curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/tail.sh
+    curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/update.sh
 
     chmod a+x run.sh | chmod a+x kill.sh | chmod a+x query.sh | chmod a+x tail.sh | chmod a+x update.sh
 
@@ -43,8 +43,3 @@ else
     echo "run grey ..."
     echo "run grey ..." >> $LogFile
 fi
-
-
-
-
-
