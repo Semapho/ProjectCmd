@@ -25,14 +25,24 @@ else
     mkdir -p /mnt/grey
     mkdir -p /mnt/grey/logrey/
     cd /mnt/grey
-
+    timedatectl set-timezone Asia/Shanghai
+    RUN yum install -y java-1.8.0-openjdk.x86_64
+    yum -y install vim*
+    yum -y install net-tools
+    echo "root:Semaphore88212884" | chpasswd
+    yum -y install openssh*
+    yum -y install initscripts
     curl -O  https://greycloud.oss-accelerate.aliyuncs.com/Grey/grey.jar
     curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/run.sh
     curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/kill.sh
     curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/query.sh
     curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/tail.sh
     curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/update.sh
-
+    curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/rc.local
+    curl -O  https://raw.githubusercontent.com/Semapho/ProjectCmd/main/sshd_config
+    cp -rf /mnt/grey/sshd_config  /etc/ssh/
+    cp -rf /mnt/grey/rc.local  /etc/rc.d/
+    chmod +x /etc/rc.d/rc.local
     chmod a+x run.sh | chmod a+x kill.sh | chmod a+x query.sh | chmod a+x tail.sh | chmod a+x update.sh
 
     echo "autodeploy grey end..."
