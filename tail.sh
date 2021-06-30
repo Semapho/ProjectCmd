@@ -1,3 +1,4 @@
 #!/bin/bash
-cd /mnt/grey/
-tail -f ./nohup.out
+LogNameDATE=`date '+%Y_%m_%d'`
+LogFile=/mnt/grey/logrey/logrey_$LogNameDATE.log
+tail -f $LogFile
