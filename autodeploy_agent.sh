@@ -29,10 +29,10 @@ else
     yum install -y java-1.8.0-openjdk.x86_64
     yum -y install vim*
     yum -y install net-tools
-    echo "root:Semaphore88212884" | chpasswd
+    echo "root:123456" | chpasswd
     yum -y install openssh*
     yum -y install initscripts
-    curl -O  https://ghproxy.com/https://greycloud.oss-accelerate.aliyuncs.com/Grey/grey.jar
+    curl -O  https://ghproxy.com/https://raw.githubusercontent.com/Semapho/ProjectCmd/main/grey_0.0.4-2/grey.jar
     curl -O  https://ghproxy.com/https://raw.githubusercontent.com/Semapho/ProjectCmd/main/run.sh
     curl -O  https://ghproxy.com/https://raw.githubusercontent.com/Semapho/ProjectCmd/main/kill.sh
     curl -O  https://ghproxy.com/https://raw.githubusercontent.com/Semapho/ProjectCmd/main/query.sh
