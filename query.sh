@@ -1,2 +1,2 @@
 #!/bin/bash
-ps -ef |grep grey
+ps -ef | grep grey
